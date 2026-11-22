@@ -47,11 +47,12 @@
     .card:before { content:""; position:absolute; inset:-1px; border-radius:28px; padding:1px;
       background:linear-gradient(135deg, rgba(101,244,222,.58), transparent 38%, transparent 68%, rgba(67,179,206,.38));
       -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0); -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none; }
-    .logo-ring { width:116px; height:116px; margin:0 auto 22px; padding:7px; border-radius:50%;
-      background:conic-gradient(from 0deg, var(--accent), transparent 28%, #278eae 58%, var(--accent2), var(--accent));
-      box-shadow:0 0 32px rgba(72,214,208,.22); animation:spin 12s linear infinite; }
-    .logo-inner { width:100%; height:100%; display:grid; place-items:center; border-radius:50%; background:#0b202a; overflow:hidden; }
-    .logo-inner img { width:100%; height:100%; object-fit:cover; border-radius:50%; animation:counterspin 12s linear infinite; }
+    .logo-ring { width:144px; height:144px; margin:0 auto 25px; padding:6px; border-radius:50%;
+      background:conic-gradient(from 0deg, #43e6cf, #2c9caa 30%, #75f0d2 62%, #2b8ea8, #43e6cf);
+      box-shadow:0 0 0 5px rgba(74,224,204,.08), 0 0 42px rgba(72,214,208,.34); }
+    .logo-inner { width:100%; height:100%; display:grid; place-items:center; border-radius:50%; background:#e9fff8; overflow:hidden; }
+    .logo-inner img { display:block; width:100%; height:100%; object-fit:contain; border-radius:50%;
+      padding:2px; filter:brightness(1.65) contrast(1.2) saturate(1.35); }
     @keyframes spin { to { transform:rotate(360deg) } }
     @keyframes counterspin { to { transform:rotate(-360deg) } }
     h1 { margin:0; font-size:clamp(29px,7vw,36px); line-height:1.15; letter-spacing:-1.2px; font-weight:800; }
@@ -83,7 +84,7 @@
   <main class="wrap">
     <div class="topline">Welcome to</div>
     <section class="card">
-      <div class="logo-ring"><div class="logo-inner"><img src="./logo.png" alt="Kuber Bazar logo"></div></div>
+      <div class="logo-ring"><div class="logo-inner"><img src="./logo.png?v=2" alt="Kuber Bazar logo" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/ashoksahani7082/kuber-bazar/main/logo.png';"></div></div>
       <h1>Kuber <span>Bazar</span></h1>
       <p class="subtitle">Your app is ready. Download the Android application using the button below.</p>
       <div class="status"><i class="dot"></i> Android app available</div>
